@@ -1,0 +1,222 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.box-img {
+    position: relative;
+    margin-right: 20px;
+}
+
+.img-celular {
+    width: 450px;
+}
+
+
+.img-insta-container {
+    position: absolute;
+    left: 150px;   
+    top: 22px;  
+    animation: slide 05s infinite; 
+}
+
+
+.img-insta {
+    position: absolute;
+    height: auto;
+    width: 246px;
+    transition: opacity 2s ease-in-out; /* Transição suave */
+    transition-timing-function: ease-in-out;
+}
+
+.img-insta:first-child {
+    transition: opacity 5s ease-in-out; /* Transição suave */
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; /* Ajuste a largura conforme necessário */
+    height: auto;
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+    border-radius: 10px; /* Arredondamento mais suave */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.box-form img { /* Estilos para o logo */
+    display: block;
+    margin: 0 auto 30px auto; /* Centraliza o logo */
+    width: 150px; /* Ajuste conforme necessário */
+}
+
+.box-form input { /* Estilos para os inputs */
+    width: 100%; /* Largura completa */
+    height: 40px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+.box-form button { /* Estilos para o botão */
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.box-form a { /* Estilos para links */
+    display: block; /* Links ocupam toda a largura */
+    text-align: center;
+    color: #044876;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.box-form a:hover {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #0095f6; /* Consistent link color */
+    margin-bottom: 15px;
+}
+
+a:hover {
+    text-decoration: none; /* Underline on hover */
+}
+
+.box-form p {
+    text-align: center /* Centraliza o texto */;
+    margin-top: 10px;
+    
+}
+
+.cadastro-insta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cadastro-insta p + a {
+    margin-left: 5px;
+}
+
+.cadastro-insta p {
+    margin-right: 5px;
+}
+
+.cadastro-insta a {
+    align-self: center;
+}
+
+.cadastro-insta p,
+.cadastro-insta a {
+    margin: 0 10px;
+}
+
+.box-form .cadastro-insta {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-form .app-download { /* Estilos para a seção de download */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.box-form .app-download img {
+    margin: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.app-download {
+    text-align: center;
+}
+
+.app-download p {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;  
+}
+
+.app-download .download-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.app-download .download-links img {
+    margin: 0 10px;
+    width: 130px;
+    height: auto;
+}
+
+/* Responsiveness (adjust as needed) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+    .box-img {
+        display: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .box-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .box-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 300px) {
+    .box-form {
+        padding: 10px;
+    }
+}
