@@ -9,6 +9,26 @@
 </head>
 
 <body>
+    <script>
+        // Verifica se o usuário já aceitou o disclaimer
+        window.addEventListener('DOMContentLoaded', function () {
+            const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+
+            // Se NÃO aceitou, redireciona para a página de disclaimer
+            if (disclaimerAccepted !== 'true') {
+                window.location.href = 'disclaimer.html';
+            }
+        });
+
+        // Também adicione um botão de logout/retorno ao disclaimer
+        function showDisclaimerAgain() {
+            if (confirm('Deseja ver novamente o aviso legal?')) {
+                localStorage.removeItem('disclaimerAccepted');
+                window.location.href = 'disclaimer.html';
+            }
+        }
+    </script>
+
     <div class="container">
         <div class="box-img left-conteiner">
             <img src="src/img/celular.png" alt="Celular com Instagram" class="img-celular">
@@ -29,7 +49,7 @@
             <a href="#" class="login-facebook">Entrar com o Facebook</a>
             <a href="#" class="esqueceu-senha">Esqueceu a Senha?</a>
 
-            <p class="cadastro-insta">Não tem uma conta?    <a href="#" class="cadastro-insta">Cadastre-se</a></p>
+            <p class="cadastro-insta">Não tem uma conta? <a href="#" class="cadastro-insta">Cadastre-se</a></p>
 
             <div class="app-download">
                 <p>Obtenha o aplicativo:</p>
@@ -38,7 +58,24 @@
                     <a href="#" class="download-img"><img src="src/img/ios.png" alt="App Store"></a>
                 </div>
             </div>
+
+            <div class="disclaimer-footer">
+                <p
+                    style="font-size: 11px; color: #8e8e8e; text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #dbdbdb;">
+                    <strong>⚠️ Aviso:</strong> Este é um projeto educacional.
+                    <a href="disclaimer.html" onclick="showDisclaimerAgain(); return false;"
+                        style="color: #0095f6; text-decoration: underline; font-size: 11px;">
+                        Clique para ver o aviso legal completo
+                    </a>
+                    <br>
+                    <span style="font-size: 10px; color: #a0a0a0;">
+                        Desenvolvido por Rayssa Vieira • Dev em Dobro • Janeiro 2025
+                    </span>
+                </p>
+            </div>
         </div>
+    </div>
+
     </div>
     <script src="src/js/script.js"></script>
 </body>

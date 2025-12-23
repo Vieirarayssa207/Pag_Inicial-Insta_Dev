@@ -220,3 +220,29 @@ a:hover {
         padding: 10px;
     }
 }
+
+/**FOOTER DE AVISO*/
+.disclaimer-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #dbdbdb;
+    text-align: center;
+    width: 100%;
+}
+
+.disclaimer-footer p {
+    font-size: 13px !important;
+    color: #8e8e8e !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.disclaimer-footer a {
+    font-size: 12px !important;
+    color: #0095f6 !important;
+    text-decoration: underline !important;
+}
+
+.disclaimer-footer a:hover {
+    text-decoration: none !important;
+}
